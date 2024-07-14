@@ -76,7 +76,7 @@ const ReferralFormModal: React.FC<ReferNowProps> = ({ open, handleClose }) => {
   });
 
   const onSubmit: SubmitHandler<ReferralData> = async (data: ReferralData) => {
-    // console.log(data);
+    console.log("Data being sent to API - ", data);
     try {
       // @ts-ignore
       const response = await axios.post(
@@ -94,7 +94,7 @@ const ReferralFormModal: React.FC<ReferNowProps> = ({ open, handleClose }) => {
         }
       );
 
-      // console.log("Referral Response - ", response);
+      console.log("Referral Response - ", response);
 
       setSuccessMessage("Referral submitted successfully! 🚀");
       reset();
